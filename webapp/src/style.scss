@@ -21,7 +21,8 @@ ul.markdown__list {
   padding-inline-end: 0 !important;
 
   > li + li > p:first-child {
-    margin-top: 0.5em;
+    margin-top: 20px;
+    margin-top: 1lh;
   }
 }
 
@@ -36,7 +37,8 @@ ol.markdown__list {
   }
 
   > li + li > p:first-child {
-    margin-top: 0.5em;
+    margin-top: 20px;
+    margin-top: 1lh;
   }
 
   > li::before {
