@@ -17,6 +17,12 @@ function fixMattermostDirections() {
     element.setAttribute("dir", "auto");
   });
 
+  // Mattermost sizes each list's indent to its widest number as an inline padding-left;
+  // hand it to the stylesheet so it can be applied on the right in RTL.
+  document.querySelectorAll(".post-message__text ol.markdown__list").forEach((element) => {
+    element.style.setProperty("--rtl-list-indent", element.style.paddingLeft || null);
+  });
+
   // In Mattermost 5.34, this CSS rule exists:
   //
   //     .post-message__text > ul { direction: ltr }
